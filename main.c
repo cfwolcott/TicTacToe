@@ -6,6 +6,8 @@
 #include <unistd.h>
 #include <errno.h>
 
+#include "printfColor.h"
+
 typedef enum
 {
 	E_GAME_CHECK__NO_RESULT,
@@ -115,12 +117,6 @@ bool markSquare( int choice, char mark )
 }
 
 //-----------------------------------------------------------------------------
-/*********************************************
-FUNCTION TO RETURN GAME STATUS
-1 FOR GAME IS OVER WITH RESULT
--1 FOR GAME IS IN PROGRESS
-O GAME IS OVER AND NO RESULT
- **********************************************/
 tGAME_CHECK checkWin()
 {
 	tGAME_CHECK eResult = E_GAME_CHECK__WIN;
@@ -171,9 +167,13 @@ FUNCTION TO DRAW BOARD OF TIC TAC TOE WITH PLAYERS MARK
 void drawBoard()
 {
 	system("clear");
-	printf("\n\n\tTic Tac Toe\n\n");
+	printfColor("Tic-Tac-Toe", E_COLOR_GREEN, E_STYLE_BOLD);
+	printf("\n\n");
 
-	printf("Player 1 (X)  -  Player 2 (O)\n\n\n");
+	printfColor("Player 1 (X)", E_COLOR_RED, E_STYLE_NORMAL);
+	printf("  -  ");
+	printfColor("Player 2 (O)", E_COLOR_YELLOW, E_STYLE_NORMAL);
+	printf("\n\n\n");
 
 
 	printf("     |     |     \n");

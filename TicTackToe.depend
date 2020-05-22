@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1590109252 source:/home/charlie/code/TicTacToe/main.c
+1590113991 source:/home/charlie/code/TicTacToe/main.c
 	<stdio.h>
 	<stdlib.h>
 	<stdbool.h>
@@ -7,4 +7,12 @@
 	<sys/syscall.h>
 	<unistd.h>
 	<errno.h>
+	"printfColor.h"
+
+1590114015 /home/charlie/code/TicTacToe/printfColor.h
+
+1590114015 source:/home/charlie/code/TicTacToe/printfColor.c
+	<string.h>
+	<stdio.h>
+	"printfColor.h"
 
