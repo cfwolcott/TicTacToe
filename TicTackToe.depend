@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1590109252 source:/home/charlie/code/TicTacToe/main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<string.h>
+	<sys/syscall.h>
+	<unistd.h>
+	<errno.h>
+
