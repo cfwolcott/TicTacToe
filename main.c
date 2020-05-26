@@ -43,14 +43,22 @@ int main()
 {
 	int player = 1, choice;
 	tGAME_CHECK tGameCheck;
-
 	char mark;
 
 	do
 	{
 		drawBoard();
 
-		printf("Player %s, enter a number:  ", (player == 1) ? "X" : "O");
+		printf("Player ");
+		if( player == 1)
+		{
+			printfColor("X", E_COLOR_RED, E_STYLE_BOLD);
+		}
+		else
+		{
+			printfColor("O", E_COLOR_YELLOW, E_STYLE_BOLD);
+		}
+		printf(" enter a number: ");
 
 		choice = getInput();
 
@@ -87,7 +95,16 @@ int main()
 
 	if( tGameCheck == E_GAME_CHECK__WIN )
 	{
-		printf("==> Player %s wins!!\n", (player == 1) ? "X" : "O");
+		printf("==> Player ");
+		if( player == 1)
+		{
+			printfColor("X", E_COLOR_RED, E_STYLE_BOLD);
+		}
+		else
+		{
+			printfColor("O", E_COLOR_YELLOW, E_STYLE_BOLD);
+		}
+		printf(" wins!! <==\n\n");
 	}
 	else
 	{
@@ -170,11 +187,7 @@ void drawBoard()
 	printfColor("Tic-Tac-Toe", E_COLOR_GREEN, E_STYLE_BOLD);
 	printf("\n\n");
 
-	printfColor("Player 1 (X)", E_COLOR_RED, E_STYLE_NORMAL);
-	printf("  -  ");
-	printfColor("Player 2 (O)", E_COLOR_YELLOW, E_STYLE_NORMAL);
-	printf("\n\n\n");
-
+	printfColorStart( E_COLOR_BLUE, E_STYLE_NORMAL );
 
 	printf("     |     |     \n");
 	printf("  %c  |  %c  |  %c \n", square[1], square[2], square[3]);
@@ -190,5 +203,7 @@ void drawBoard()
 	printf("  %c  |  %c  |  %c \n", square[7], square[8], square[9]);
 
 	printf("     |     |     \n\n");
+
+	printfColorEnd();
 }
 
