@@ -26,6 +26,8 @@ typedef enum
 } eSTYLE;
 
 void printfColor( char *pString, eCOLOR eColor, eSTYLE eStyle);
+void printfColorStart( eCOLOR eColor, eSTYLE eStyle );
+void printfColorEnd( void );
 
 #endif // PRINTFCOLOR_H_INCLUDED
 

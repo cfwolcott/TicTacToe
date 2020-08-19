@@ -83,7 +83,8 @@ int main()
 		{
 			printf("Invalid move ");
 
-			for(int i=0; i<2; i++)
+			int i;
+			for(i=0; i<2; i++)
 			{
 				sleep(1);
 			}
